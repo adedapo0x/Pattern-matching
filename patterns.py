@@ -66,7 +66,7 @@ def print_triangle(num):
 
 
 # function to print inverted triangle
-# we make use of know space function earlier defined 
+# we make use of know_space function earlier defined 
 def print_inverted_triangle(num):
     base = know_space(num)
     for i in range(num, 0, -1):
@@ -75,3 +75,19 @@ def print_inverted_triangle(num):
         print(' ' * space , '*' * printed, ' ' * space)
 
 # print_inverted_triangle(7) # test
+
+
+# function to print diamond
+# here we also make use of know_space function defined earlier
+def print_diamond(num):
+    base = know_space(num)
+    for i in range(1, num + 1):
+        printed = know_space(i)
+        space = (base - printed) // 2
+        print(' ' * space , '*' * printed, ' ' * space)
+    for j in range(num, 0, -1):
+        printed = know_space(j)
+        space = (base - printed) // 2
+        print(' ' * space , '*' * printed, ' ' * space)
+
+print_diamond(6)
