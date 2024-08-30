@@ -90,4 +90,16 @@ def print_diamond(num):
         space = (base - printed) // 2
         print(' ' * space , '*' * printed, ' ' * space)
 
-print_diamond(6)
+# print_diamond(6) # test
+
+
+
+# function to print half diamond
+def print_half_diamond(num):
+    for i in range(1, num + 1):
+        print('*' * i)
+    for j in range(num - 1, 0, -1):
+        print('*' * j)
+
+# print_half_diamond(10) # test
+
