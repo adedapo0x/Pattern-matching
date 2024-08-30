@@ -45,3 +45,21 @@ def decrease_number(num):
 
 # decrease_number(5) # Test
 
+
+# print triangle of asterisks with specified length
+# first get function to solve to know spaces we are dealing with
+def know_space(num):
+    count = 1
+    if (num == 1): return 1
+    for i in range(num - 1):
+        count += 2
+    return count
+# function to print actual triangle
+def print_triangle(num):
+    base = know_space(num)
+    for i in range(1, num + 1):
+        printed = know_space(i)
+        space = (base - printed) // 2
+        print(' ' * space , '*' * printed, ' ' * space)
+
+# print_triangle(5)  # Test
